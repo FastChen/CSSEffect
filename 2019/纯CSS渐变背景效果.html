@@ -1,0 +1,42 @@
+<!--
+    代码来源于网络 Code from the Internet
+    复古派科技:https://fgpai.com
+    灵工艺软件工作室:https://nullcraft.org
+	  项目文件开源地址:https://github.com/FastChen/FiveMinutesCSSEffect
+	
+    渐变色:
+    #ee7752, #e73c7e, #23a6d5, #23d5ab
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>五分钟玩转CSS - 渐变背景</title>
+</head>
+<style>
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(-45deg,#ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+
+}
+@keyframes gradientBG{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+</style>
+<body>
+
+</body>
+</html>
