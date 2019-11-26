@@ -1,0 +1,75 @@
+<!--
+    代码来源于网络 Code from the Internet
+    复古派科技:https://fgpai.com
+    灵工艺软件工作室:https://nullcraft.org
+    项目文件开源地址:https://github.com/FastChen/FiveMinutesCSSEffect
+    单文件代码查看地址:https://fgpai.com/video/css
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>五分钟玩转CSS - 切换开关</title>
+</head>
+<style>
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #212121;
+  color: #fff;
+}
+.toggle-control{
+  display: block;
+  position: relative;
+  padding-left: 100px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.toggle-control input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.toggle-control input:checked ~ .control{
+  background-color: dodgerblue;
+}
+.toggle-control input:checked ~ .control::after{
+  left: 55px;
+}
+.toggle-control .control{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  background-color: darkgray;
+  transition: background-color 0.15s ease-in;
+}
+.toggle-control .control::after{
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background:#fff;
+  transition: left 0.15s ease-in;
+}
+</style>
+<body>
+<label class="toggle-control">
+  <input type="checkbox" checked="checked">
+  <span class="control"></span>
+</label>
+</body>
+</html>
